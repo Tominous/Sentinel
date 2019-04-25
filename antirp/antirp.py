@@ -99,6 +99,7 @@ class AntiRP(BaseCog):
         else:
             await ctx.send("No applications are whitelisted.")
 
+    @commands.Cog.listener()
     async def on_message(self, message):
         if isinstance(message.channel, discord.DMChannel):
             return
